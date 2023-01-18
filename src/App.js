@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import { React, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Routes, Route } from 'react-router-dom';
 import './styles/style.scss';
 import Header from './components/Header';
@@ -13,6 +14,12 @@ function App() {
     document.querySelector("meta[name=description]").setAttribute("content", "VeganCheck Grades gets you actual useful product ratings for vegan products.");
 }, []);
   return (
+    <>
+    <Helmet>
+        <title>VeganCheck Grades</title>
+        <meta name="description" content="VeganCheck Grades are actual useful product ratings for vegan products." />
+        <meta name="theme-color" content="#F6E6D5" />
+      </Helmet>
     <div className="App">
       <Header />
       <Routes>
@@ -21,6 +28,7 @@ function App() {
       </Routes>
         <Footer />
     </div>
+    </>
   );
 }
 
