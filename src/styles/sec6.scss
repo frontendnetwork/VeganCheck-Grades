@@ -1,0 +1,56 @@
+/* Section 6 */
+.section-timeline {
+    border-top: .2rem solid black;
+
+    &-time {
+        max-width: 50%;
+        margin: 0 auto;
+
+        .date {
+            text-transform: uppercase;
+            opacity: .5;
+            font-size: .8rem
+        }
+
+        p {
+            border-top: .2rem solid black;
+            border-width: .2rem;
+            margin: 0;
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        p:nth-child(odd) {
+            border-right: .2rem solid;
+            padding-left: 0;
+
+            &:before {
+                left: 100%;
+                margin-left: -1.25rem;
+            }
+        }
+
+        //even number borders
+        p:nth-child(even) {
+            border-left: .2rem solid;
+            padding-right: 0;
+
+            &:before {
+                right: 100%;
+                margin-right: -1.25rem;
+            }
+        }
+
+        //handle first and last
+        p:first-child {
+            border-top: 0;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        p:last-child {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
