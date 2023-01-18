@@ -1,0 +1,10 @@
+// Import barebones scss structure
+@import '_globals/reset', '_globals/mixins', '_globals/utilities', '_globals/variables', '_globals/fonts';
+
+html {
+  @include font-smoothing(on);
+  font-size: $base-font-size;
+}
+
+// Import the main stylesheet 
+@import '_modules/iconfont', '_modules/setup', '_modules/header', '_modules/sec1', '_modules/sec2', '_modules/sec3', '_modules/sec4', '_modules/sec5', '_modules/sec6', '_modules/footer', '_modules/animations', '_modules/onepage';
