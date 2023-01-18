@@ -1,0 +1,59 @@
+/* Section 5 */
+.rating {
+    border-top: .2rem solid black;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(phone) {
+        display: inherit;
+        width: 100vw;
+        padding: none;
+    }
+
+    &-right {
+        width: 50%;
+        background-image:
+            linear-gradient(to left, rgba(246, 230, 213, 0), rgba(246, 230, 213, 1)),
+            url('../img/sec5.jpg');
+        background-size: cover;
+        background-position: 40% 70%;
+        color: white;
+
+        @include mq(phone) {
+            display: none;
+        }
+    }
+
+    &-left {
+        width: 50%;
+        margin: 2rem;
+
+        @include mq(phone) {
+            width: calc(100vw - 4rem);
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.submitted,
+.checked {
+    text-align: center;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        font-size: 3rem;
+    }
+
+    .small {
+        font-size: 1rem;
+        line-height: .8rem;
+    }
+
+    .retry {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

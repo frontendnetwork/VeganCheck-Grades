@@ -1,0 +1,29 @@
+/* Header */
+.header {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2.2rem;
+    border-bottom: .2rem solid black;
+
+    img {
+        width: 25rem;
+
+        @include mq(phone) {
+            width: 80%;
+        }
+    }
+}
+
+.rotate_logo {
+    width: 20rem;
+    position: absolute;
+    top: 3.5rem;
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+
+    @include mq(phone) {
+        width: 10rem;
+        left: -4.5rem;
+    }
+}
