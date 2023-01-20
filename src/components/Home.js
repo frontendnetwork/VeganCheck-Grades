@@ -4,7 +4,7 @@ import RatingForm from './Ratingform';
 
 export default function Home() {
     return(<>
-    <img src="assets/img/vcg.svg" className="rotate_logo" />
+    <img src="assets/img/vcg.svg" className="rotate_logo" alt="VeganCheck Grades" />
     <section className="flexbox">
         <div className="flexbox-left">
         </div>
@@ -48,14 +48,14 @@ export default function Home() {
         </div>
     </section>
     <section className="grade_sample">
-        <img src="assets/img/productsample.svg" />
+        <img src="assets/img/productsample.svg" alt="" loading="lazy" />
         <div className="image-container">
-            <img src="assets/img/grade/Grade A+.svg" />
-            <img src="assets/img/grade/Grade B.svg" />
-            <img src="assets/img/grade/Grade C.svg" />
-            <img src="assets/img/grade/Grade A.svg" />
-            <img src="assets/img/grade/Grade D.svg" />
-            <img src="assets/img/grade/Grade NE.svg" />
+            <img src="assets/img/grade/Grade A+.svg" alt="Grade A+" loading="lazy" />
+            <img src="assets/img/grade/Grade B.svg" alt="Grade B" loading="lazy" />
+            <img src="assets/img/grade/Grade C.svg" alt="Grade C" loading="lazy" />
+            <img src="assets/img/grade/Grade A.svg" alt="Grade A" loading="lazy" />
+            <img src="assets/img/grade/Grade D.svg" alt="Grade D" loading="lazy" />
+            <img src="assets/img/grade/Grade NE.svg" alt="Grade Not eligible" loading="lazy" />
         </div>
     </section>
     <section className="app">
