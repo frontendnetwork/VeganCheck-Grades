@@ -1,4 +1,3 @@
-import $ from "jquery"
 import React, { useEffect } from 'react';
 import RatingForm from './Ratingform';
 
@@ -67,7 +66,7 @@ export default function Home() {
                 <p><a href="https://vegancheck.me" className="btn">Use VeganCheck.me</a> <a href="https://shareshortcuts.com/download/2224-vegancheck.html" className="btn">Get the iOS Shortcut</a></p>
             </div>
             <div className="app-flex-right">
-                <img src="assets/img/phone.svg" />
+                <img src="assets/img/phone.svg" alt="Smartphone with VeganCheck.me" />
             </div>
         </div>
     </section>
