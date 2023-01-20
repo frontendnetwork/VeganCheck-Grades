@@ -1,4 +1,9 @@
+import React, { useEffect } from 'react';
+
 export default function Legal() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return(<>
     <section className="onepage">
         <h1>Legal<span className="icon-stars"></span></h1>
