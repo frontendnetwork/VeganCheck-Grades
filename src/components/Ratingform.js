@@ -6,12 +6,24 @@ function RatingForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [isNobarcode, setIsNobarcode] = useState(false);
+  const [isRateLimit, setIsRateLimit] = useState(false);
   const [product, setProduct] = useState({});
   const [shake, setShake] = useState(false);
+  const [submitCount, setSubmitCount] = useState(0);
+  const [lastSubmitTime, setLastSubmitTime] = useState(Date.now());
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const timeElapsed = (Date.now() - lastSubmitTime) / 1000 / 60;
+  if (submitCount >= 5 && timeElapsed < 1) {
+    setIsRateLimit(true);
+    return;
+  }
+
+  setIsLoading(true);
+  setSubmitCount(submitCount + 1);
+  setLastSubmitTime(Date.now());
 
     let bodyContent = new FormData();
     bodyContent.append("barcode", barcode);
@@ -51,11 +63,12 @@ function RatingForm() {
     setIsSubmitted(false);
     setIsChecked(false);
     setIsNobarcode(false);
+    setIsRateLimit(false);
   };
 
   return (
     <>
-      {!isSubmitted && !isChecked && !isNobarcode && (
+      {!isSubmitted && !isChecked && !isNobarcode && !isRateLimit && (
         <form action="" method="post" className={`ratingform centered ${shake ? 'shake' : ""}`}>
           <input
             type="number"
@@ -105,6 +118,22 @@ function RatingForm() {
             <br />
             <span className="small">
               An EAN-barcode is typically a 13-digit or 8-digit number and does not cotain any text.
+            </span>
+            <br />
+            <span className="small retry" onClick={handleRetry}>
+              Click here to retry
+            </span>
+          </p>
+        </div>
+      )}
+      {isRateLimit && (
+        <div className="checked">
+          <div className="icon-cross"></div>
+          <p>
+            Please wait a minute before submitting another request.
+            <br />
+            <span className="small">
+              We're  sorry, but we have to limit the number of requests to prevent abuse.
             </span>
             <br />
             <span className="small retry" onClick={handleRetry}>
