@@ -25,14 +25,15 @@ const handleSubmit = async (e) => {
   setSubmitCount(submitCount + 1);
   setLastSubmitTime(Date.now());
 
-    let bodyContent = new FormData();
-    bodyContent.append("barcode", barcode);
+    const data = { barcode: barcode };
+    const options = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data)
+    };
 
     try {
-      const response = await fetch('https://cldsi.de/test/backend.php', {
-        method: 'POST',
-        body: bodyContent
-      });
+      const response = await fetch('https://api.vegancheck.me/v0/grades/backend', options);
       let result = await response.text();
 
       setIsLoading(false);

@@ -2,10 +2,16 @@
 .onepage {
 	margin: 0 auto;
 	width: 70%;
+	word-break: break-word;
 
 	li {
 		font-size: 1.5rem;
 		font-weight: 200;
+	}
+
+	.code {
+		font-family: monospace;
+		font-size: 1.4rem;
 	}
 
 	@include mq(s-tablet){
