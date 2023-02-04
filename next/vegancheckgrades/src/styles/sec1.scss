@@ -1,0 +1,38 @@
+/* Section 1 */
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(phone) {
+        display: inherit;
+        width: 100vw;
+        padding: none;
+    }
+
+    &-left {
+        width: 50%;
+        background-image:
+            linear-gradient(to right, rgba(246, 230, 213, 0), rgba(246, 230, 213, 1)),
+            url('../img/img/vegan.webp');
+        background-size: cover;
+        color: white;
+
+        @include mq(phone) {
+            height: 8rem;
+            width: 100vw;
+            background-image:
+                linear-gradient(to bottom, rgba(246, 230, 213, 0), rgba(246, 230, 213, 1)),
+                url('../img/img/vegan.webp');
+        }
+    }
+
+    &-right {
+        width: 50%;
+        margin: 2rem;
+
+        @include mq(phone) {
+            width: calc(100vw - 4rem);
+            margin-top: -3rem;
+        }
+    }
+}
