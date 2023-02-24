@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Production
-      url: https://vegancheck.me
+      url: https://grade.vegancheck.me
 
     steps:
       - uses: actions/checkout@v3
@@ -26,7 +26,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
+          cache: 'npm'
 
       - run: npm install
       - run: npm run build
