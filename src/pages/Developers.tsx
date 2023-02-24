@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import Gist from "react-gist";
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React, { useEffect } from "react";
+import Script from "next/script";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 interface Grade {
   grade: string;
@@ -12,10 +12,15 @@ export default function Developers(): JSX.Element {
     <>
       <Header />
       <section className="onepage">
-        <h1>For Developers<span className="icon-stars"></span></h1>
-        <p><b>Use the VeganCheck API</b></p>
+        <h1>
+          For Developers<span className="icon-stars"></span>
+        </h1>
         <p>
-          Dear Developers,<br />
+          <b>Use the VeganCheck API</b>
+        </p>
+        <p>
+          Dear Developers,
+          <br />
           if you want to integrate VeganCheck Grades into your app, you can use
           our API. It's free and easy to use.
         </p>
@@ -23,18 +28,19 @@ export default function Developers(): JSX.Element {
           The propper end-point to use would be the "product"-endpoint. It is
           completely documented at JokeNetwork.
         </p>
-        <a
-          href="https://jokenetwork.de/vegancheck-api"
-          className="btn"
-        >
+        <a href="https://jokenetwork.de/vegancheck-api" className="btn">
           Read the documentation
         </a>
 
-        <p><b>Quick overview</b></p>
         <p>
-          You can easily send a <span className="code">POST</span>-request to our
-          api-endpoint{" "}
-          <span className="code">https://api.vegancheck.me/v0/product/productcode</span>
+          <b>Quick overview</b>
+        </p>
+        <p>
+          You can easily send a <span className="code">POST</span>-request to
+          our api-endpoint{" "}
+          <span className="code">
+            https://api.vegancheck.me/v0/product/productcode
+          </span>
           .
         </p>
         <p>
@@ -43,7 +49,7 @@ export default function Developers(): JSX.Element {
           the VeganCheck Grade:
         </p>
         <div>
-          <Gist id="203579400565403b8b4285965485055c" />
+          <Script src="https://gist.github.com/philipbrembeck/203579400565403b8b4285965485055c.js" />
         </div>
 
         <p>
