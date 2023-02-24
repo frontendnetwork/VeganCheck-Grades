@@ -101,7 +101,7 @@ const handleSubmit = async (e) => {
       )}
       {isChecked && (
         <div className="checked">
-          <div className="icon-cross"></div>
+          <div className="icon-tick"></div>
           <p>
             <span className="productname">{product.name}</span> is already rated: <span className="productrating">{product.grade}</span>
             <br />
