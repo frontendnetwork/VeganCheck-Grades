@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Production
-      url: https://grade.vegancheck.me
+      url: https://grade.veganify.app
 
     steps:
       - uses: actions/checkout@v3

@@ -33,7 +33,7 @@ const handleSubmit = async (e) => {
     };
 
     try {
-      const response = await fetch('https://api.vegancheck.me/v0/grades/backend', options);
+      const response = await fetch('https://api.veganify.app/v0/grades/backend', options);
       let result = await response.text();
 
       setIsLoading(false);

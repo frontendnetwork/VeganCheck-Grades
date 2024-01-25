@@ -1,12 +1,10 @@
-<img width="150px" src="https://user-images.githubusercontent.com/4144601/221259594-4ef9932d-7be3-4357-ac45-bfc41ad07577.svg" align="right" alt="VeganCheck Grades Logo">
-
-# VeganCheck Grades
-This is the promotional website for VeganCheck Grades.
+# Veganify Grades
+This is the promotional website for Veganify Grades.
 
 It is built in Next.js and can be easily be run by `npm run start` and build by `npm run build`.
 
 ## Live website
-The live website is available at <https://grade.vegancheck.me>.
+The live website is available at <https://grade.veganify.app>.
 
 ## How to access the Grades
-The VeganCheck Grades are available through the VeganCheck.me API. You can find the [repo here](https://github.com/JokeNetwork/VeganCheck.me-API) and the [documentation here](https://jokenetwork.de/vegancheck-api).
+The Veganify Grades are available through the VeganCheck.me API. You can find the [repo here](https://github.com/frontendnetwork/veganify-API) and the [documentation here](https://jokenetwork.de/veganify-api).
